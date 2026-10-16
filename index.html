@@ -1,40 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Showcase</title>
-    <style>
-        body {
-            /* Centers the content vertically and horizontally */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-            font-family: sans-serif;
-        }
-        .image-container {
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            /* Ensures the image doesn't overflow its container on small screens */
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cris Dominguez — Works</title>
+  <meta name="description" content="Portfolio of Cris Dominguez, a bilingual visual artist working in painting, drawing, sculpture, photography, and mixed media on Mexico's Pacific coast.">
+  <link rel="canonical" href="https://www.crisdominguez.com/">
+
+  <!-- Social sharing (Open Graph / Twitter). Replace og-image.jpg with a 1200x630 crop of a favorite work. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cris Dominguez — Artist">
+  <meta property="og:description" content="Painting, drawing, sculpture, photography, and mixed media.">
+  <meta property="og:url" content="https://www.crisdominguez.com/">
+  <meta property="og:image" content="https://www.crisdominguez.com/images/site/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/site/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cris Dominguez",
+    "alternateName": "Maria Cristina Dominguez",
+    "url": "https://www.crisdominguez.com/",
+    "jobTitle": "Visual Artist",
+    "knowsLanguage": ["en", "es"],
+    "sameAs": ["https://www.instagram.com/cris_dominguz2007/"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="image-container">
-        <!-- The src attribute must match your uploaded filename exactly -->
-        <img src="assets/IMG-20190929-WA0008.jpg" alt="Child wearing a school uniform jacket">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="./">Cris Dominguez<span class="dot">.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="./" aria-current="page">Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
+  <main id="main">
+    <section class="wrap page-intro">
+      <p class="eyebrow">Selected works · 2023 – present</p>
+      <h1>Making without the mask.</h1>
+      <!-- PLACEHOLDER: one-sentence intro. Draft below is based on her personal statement — have Cris rewrite it in her own words. -->
+      <p class="lede">Painting, drawing, sculpture, photography and mixed media, made between Guadalajara, Chicago, and a small fishing village on Mexico's Pacific coast — work that <em>lets the mistakes stay in.</em></p>
+    </section>
+
+    <section class="wrap" aria-labelledby="works-heading">
+      <h2 id="works-heading" class="visually-hidden">Works</h2>
+
+      <!-- Filters: each button's data-filter must match a word in a work's data-medium. Delete buttons for media she doesn't show. -->
+      <ul class="filters" aria-label="Filter works by medium">
+        <li><button class="filter-btn" data-filter="all" aria-pressed="true">All</button></li>
+        <li><button class="filter-btn" data-filter="painting" aria-pressed="false">Painting</button></li>
+        <li><button class="filter-btn" data-filter="drawing" aria-pressed="false">Drawing</button></li>
+        <li><button class="filter-btn" data-filter="sculpture" aria-pressed="false">Sculpture</button></li>
+        <li><button class="filter-btn" data-filter="photography" aria-pressed="false">Photography</button></li>
+        <li><button class="filter-btn" data-filter="mixed-media" aria-pressed="false">Mixed media</button></li>
+        <li><button class="filter-btn" data-filter="film" aria-pressed="false">Film &amp; digital</button></li>
+      </ul>
+
+      <!--
+        ============================================================
+        HOW TO ADD A WORK  (copy this whole <li> block; newest first)
+        ============================================================
+        <li class="work" data-medium="painting" data-year="2026"
+            data-full="images/works/2026-title-slug.jpg">
+          <button class="work-thumb" type="button" aria-label="View larger: TITLE">
+            <img src="images/works/thumbs/2026-title-slug.jpg"
+                 alt="DESCRIBE WHAT IS SEEN: subject, colors, composition (not just the title)"
+                 width="800" height="1000" loading="lazy" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">TITLE</p>
+            <p class="work-meta">MEDIUM · DIMENSIONS · YEAR</p>
+            <p class="work-desc" hidden>OPTIONAL 1–3 sentence description (shown in the enlarged view).</p>
+          </figcaption>
+        </li>
+        - data-medium can hold several words: data-medium="painting mixed-media"
+        - First 4 works: remove loading="lazy" so they appear instantly.
+        ============================================================
+      -->
+      <ul class="works-grid">
+
+        <!-- PLACEHOLDER WORK 01 -->
+        <li class="work" data-medium="painting" data-year="2026" data-full="images/works/_placeholder-1.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Untitled (Boats at Dawn)">
+            <img src="images/works/_placeholder-1.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Untitled (Boats at Dawn)</p>
+            <p class="work-meta">Acrylic on canvas · 24 × 30 in · 2026</p>
+            <p class="work-desc" hidden>PLACEHOLDER description.</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 02 -->
+        <li class="work" data-medium="mixed-media" data-year="2026" data-full="images/works/_placeholder-2.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Title of Work">
+            <img src="images/works/_placeholder-2.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Title of Work</p>
+            <p class="work-meta">Mixed media on paper · 18 × 24 in · 2026</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 03 -->
+        <li class="work" data-medium="drawing" data-year="2025" data-full="images/works/_placeholder-3.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Title of Work">
+            <img src="images/works/_placeholder-3.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Title of Work</p>
+            <p class="work-meta">Charcoal on paper · 18 × 24 in · 2025</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 04 — e.g. a piece from the SAIC summer intensive -->
+        <li class="work" data-medium="sculpture" data-year="2025" data-full="images/works/_placeholder-4.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Title of Work">
+            <img src="images/works/_placeholder-4.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Title of Work</p>
+            <p class="work-meta">Clay and found objects · 10 × 6 × 6 in · 2025</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 05 -->
+        <li class="work" data-medium="photography" data-year="2025" data-full="images/works/_placeholder-5.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Title of Work">
+            <img src="images/works/_placeholder-5.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" loading="lazy" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Title of Work</p>
+            <p class="work-meta">Digital photograph · Dimensions variable · 2025</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 06 -->
+        <li class="work" data-medium="painting" data-year="2024" data-full="images/works/_placeholder-6.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Title of Work">
+            <img src="images/works/_placeholder-6.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" loading="lazy" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Title of Work</p>
+            <p class="work-meta">Oil on panel · 12 × 16 in · 2024</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 07 — the 30-min Costa Rica documentary (2024) could live here; link the thumbnail to a video page or YouTube/Vimeo -->
+        <li class="work" data-medium="film" data-year="2024" data-full="images/works/_placeholder-7.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Documentary, Costa Rica">
+            <img src="images/works/_placeholder-7.svg" alt="PLACEHOLDER — still frame from the documentary" width="800" height="1000" loading="lazy" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Documentary (title TBD)</p>
+            <p class="work-meta">Short documentary film · 30 min · 2024</p>
+            <p class="work-desc" hidden>Interviews, filming and editing documenting a four-week service-learning program in San José, Costa Rica, and the cross-cultural perspectives of the people involved.</p>
+          </figcaption>
+        </li>
+
+        <!-- PLACEHOLDER WORK 08 -->
+        <li class="work" data-medium="drawing mixed-media" data-year="2023" data-full="images/works/_placeholder-8.svg">
+          <button class="work-thumb" type="button" aria-label="View larger: Title of Work">
+            <img src="images/works/_placeholder-8.svg" alt="PLACEHOLDER — describe the artwork here" width="800" height="1000" loading="lazy" decoding="async">
+          </button>
+          <figcaption>
+            <p class="work-title">Title of Work</p>
+            <p class="work-meta">Ink and watercolor · 9 × 12 in · 2023</p>
+          </figcaption>
+        </li>
+
+      </ul>
+      <p class="works-empty" hidden>No works in this medium yet.</p>
+    </section>
+  </main>
+
+  <!-- Lightbox (filled in by js/main.js) -->
+  <dialog id="lightbox" class="lightbox" aria-label="Artwork viewer">
+    <button class="lb-btn lb-close" type="button">Close ✕</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous work">←</button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next work">→</button>
+    <div class="lightbox-inner">
+      <figure class="lightbox-figure"><img src="" alt=""></figure>
+      <div class="lightbox-caption">
+        <p class="work-title"></p>
+        <p class="work-meta"></p>
+        <p class="lightbox-desc" hidden></p>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-current-year>2026</span> Cris Dominguez. All artwork © the artist.</p>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/cris_dominguz2007/" rel="me noopener" target="_blank">Instagram</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
