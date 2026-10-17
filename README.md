@@ -68,17 +68,32 @@ Find every spot that still needs content by searching the project for `PLACEHOLD
 
 ### 4. Add a work
 In `index.html`, copy the template that sits in the comment above `<ul class="works-grid">`. Paste it as the **first** item to keep newest work first, then fill in:
-- `data-medium`: one or more of `painting drawing sculpture photography mixed-media film`
+- `data-medium`: one or more of `oils graphite photography painting drawing sculpture mixed-media film`
 - `data-full`: the full-size image path
 - `src`: the thumbnail path
 - `alt`: what a viewer actually *sees* (for example: "Oil painting of three blue fishing boats pulled onto the sand at dawn, rough orange brushstrokes in the sky"). Screen readers use this text, and so does Google Images.
-- Title, then **Medium · Dimensions · Year**. Use dimensions as H × W (× D) in inches or cm, and keep one unit across the whole site.
+- Title, then **Medium · Dimensions · Year** in both languages (in the Spanish version, give dimensions in cm). Use dimensions as H × W (× D) in inches or cm, and keep one unit across the whole site.
 
-### 5. Update the CV, news, and contact info
+### 5. English / Spanish
+Every bit of visible text is written twice, side by side:
+```html
+<span lang="en">Oil on canvas</span><span lang="es">Óleo sobre lienzo</span>
+<p lang="en">English paragraph…</p>
+<p lang="es">Párrafo en español…</p>
+```
+The EN/ES switch in the header shows one and hides the other. The choice is remembered, and Spanish-language browsers get Spanish automatically. Any link ending in `?lang=es` opens in Spanish, which is handy for sharing with Spanish-speaking schools.
+- For **alt text and labels**, add `data-es-alt="…"` (or `data-es-aria-label="…"`) next to the English attribute.
+- Text that's the same in both languages, such as names or a title she keeps in one language, doesn't need spans.
+- If you forget the Spanish half of a pair, that text simply won't appear in Spanish. Search for `lang="en"` to double-check.
+
+### 6. Filter categories
+The Works filters are: Oils, Graphite Drawings, Photography, Painting, Drawing, Sculpture, Mixed media, Film & digital. Tag each work with `data-medium` (for example `oils`, `graphite`, `photography`). A chip only appears once at least one work uses it, so unused categories stay hidden.
+
+### 7. Update the CV, news, and contact info
 - **CV:** edit `about.html`. Every entry is an `<li class="cv-item">`, so copy one and change the text. Also export the PDF to `assets/cris-dominguez-cv.pdf`.
 - **News:** copy an `<article class="post">` in `news.html`.
 - **Email:** in `contact.html`, set `data-email-user` / `data-email-domain`.
-- **Accent color or fonts:** edit `:root` at the top of `css/styles.css`.
+- **Accent color or fonts:** edit `:root` at the top of `css/styles.css`. The current accent is Pacific sea-teal `#2f6f6a`.
 
 ### Privacy note
 Cris is under 18, and this site is public. It intentionally leaves out her phone number, citizenship, exact village, and GPA, all of which appear on her resume. Keep those off the downloadable PDF as well.

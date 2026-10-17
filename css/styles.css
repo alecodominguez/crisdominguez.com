@@ -12,9 +12,9 @@
   --ink: #1c1b19;            /* primary text */
   --muted: #6b665e;          /* secondary text, metadata */
   --line: #e2dbcf;           /* hairlines */
-  --accent: #b5532f;         /* terracotta — painted-boat / bougainvillea */
+  --accent: #2f6f6a;         /* Pacific sea-teal */
   --accent-ink: #ffffff;
-  /* Alternative accent to try: --accent: #2f6f6a;  (Pacific sea-teal) */
+  /* Previous option: --accent: #b5532f;  (terracotta / painted boats) */
 
   /* Type */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -108,6 +108,24 @@ a:hover { color: var(--accent); }
   .nav-list a[aria-current="page"] { border-bottom-color: var(--line); color: var(--accent); }
 }
 
+/* ---------- Language toggle (EN / ES) ----------
+   Content is written in pairs: <span lang="en">…</span><span lang="es">…</span>
+   English shows by default (and without JS); .lang-es on <html> flips it. */
+html:not(.lang-es) [lang="es"],
+html.lang-es [lang="en"] { display: none !important; }
+
+.header-tools { display: flex; align-items: center; gap: 8px; }
+.lang-switch { display: flex; align-items: center; gap: 2px; font-size: .8rem; letter-spacing: .06em; }
+.lang-switch .sep { color: var(--line); }
+.lang-switch button {
+  font: inherit; background: none; border: 0; cursor: pointer; padding: 8px 6px;
+  color: var(--muted); border-bottom: 1px solid transparent;
+}
+.lang-switch button:hover { color: var(--ink); }
+.lang-switch button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+@media (min-width: 721px) { .header-tools { margin-left: 8px; padding-left: 16px; border-left: 1px solid var(--line); } }
+.header-inner .site-nav { margin-left: auto; }
+
 /* ---------- Page intro ---------- */
 main { display: block; min-height: 60vh; }
 .page-intro { padding-block: clamp(40px, 8vw, 96px) clamp(24px, 4vw, 48px); }
@@ -133,6 +151,7 @@ h3 { font-size: 1.15rem; margin: 0; }
   transition: all .15s var(--ease);
 }
 .filter-btn:hover { color: var(--ink); border-color: var(--ink); }
+.filter-chip[hidden] { display: none; }
 .filter-btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
 /* ---------- Works: grid ---------- */

@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-es="Noticias — Cris Dominguez">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var q=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("lang"),l=q||s||((navigator.language||"").slice(0,2)==="es"?"es":"en");if(l==="es"){document.documentElement.classList.add("lang-es");document.documentElement.lang="es";}}catch(e){}})();</script>
   <title>News — Cris Dominguez</title>
-  <meta name="description" content="Updates, shows, projects, and studio news from artist Cris Dominguez.">
+  <meta name="description" content="Updates, shows, projects, and studio news from artist Cris Dominguez. Noticias y proyectos de la artista Cris Dominguez.">
   <link rel="canonical" href="https://www.crisdominguez.com/news.html">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
   <meta property="og:title" content="News — Cris Dominguez">
   <meta property="og:url" content="https://www.crisdominguez.com/news.html">
   <meta property="og:image" content="https://www.crisdominguez.com/images/site/og-image.jpg">
@@ -17,85 +20,94 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="es">Saltar al contenido</span></a>
 
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="wordmark" href="./">Cris Dominguez<span class="dot">.</span></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Main">
+      <nav id="site-nav" class="site-nav" aria-label="Main" data-es-aria-label="Principal">
         <ul class="nav-list">
-          <li><a href="./">Works</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html" aria-current="page">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="./"><span lang="en">Works</span><span lang="es">Obras</span></a></li>
+          <li><a href="about.html"><span lang="en">About</span><span lang="es">Acerca</span></a></li>
+          <li><a href="news.html" aria-current="page"><span lang="en">News</span><span lang="es">Noticias</span></a></li>
+          <li><a href="contact.html"><span lang="en">Contact</span><span lang="es">Contacto</span></a></li>
         </ul>
       </nav>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" data-set-lang="en" aria-pressed="true" title="English">EN</button><span class="sep" aria-hidden="true">/</span><button type="button" data-set-lang="es" aria-pressed="false" title="Español">ES</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu" data-es-aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section class="wrap page-intro">
-      <p class="eyebrow">News &amp; studio notes</p>
-      <h1>What I'm working on.</h1>
+      <p class="eyebrow"><span lang="en">News &amp; studio notes</span><span lang="es">Noticias y notas de estudio</span></p>
+      <h1><span lang="en">What I'm working on.</span><span lang="es">En qué estoy trabajando.</span></h1>
     </section>
 
     <div class="wrap news-layout">
       <!-- ============ UPDATES (newest first) ============
-           Copy an <article class="post"> block to add one. Keep each to 2–4 sentences. -->
+           Copy an <article class="post"> block to add one. Keep each to 2–4 sentences, EN + ES. -->
       <section aria-labelledby="updates">
-        <h2 id="updates" class="visually-hidden">Updates</h2>
+        <h2 id="updates" class="visually-hidden"><span lang="en">Updates</span><span lang="es">Novedades</span></h2>
 
         <article class="post">
-          <time datetime="2026-10">October 2026</time>
-          <h3>New portfolio site</h3>
+          <time datetime="2026-10"><span lang="en">October 2026</span><span lang="es">Octubre 2026</span></time>
+          <h3><span lang="en">New portfolio site</span><span lang="es">Nuevo sitio web</span></h3>
           <!-- PLACEHOLDER: edit or replace -->
-          <p>This site brings together my painting, drawing, sculpture, photography, and film work in one place. New pieces will be added here as they're finished.</p>
+          <p lang="en">This site brings together my oil paintings, graphite drawings, photography, sculpture, and film in one place. New pieces will be added as they're finished.</p>
+          <p lang="es">Este sitio reúne mis óleos, dibujos en grafito, fotografía, escultura y cine en un solo lugar. Iré agregando piezas nuevas conforme las termine.</p>
         </article>
 
         <article class="post">
-          <time datetime="2026-05">May 2026</time>
-          <h3>CGA Press Creative Writing Prize</h3>
+          <time datetime="2026-05"><span lang="en">May 2026</span><span lang="es">Mayo 2026</span></time>
+          <h3><span lang="en">CGA Press Creative Writing Prize</span><span lang="es">Premio de Escritura Creativa CGA Press</span></h3>
           <!-- PLACEHOLDER: add the piece's title and a link if it's published -->
-          <p>My writing was selected for the CGA Press Creative Writing Prize, awarded to one student across all age levels at Crimson Global Academy.</p>
+          <p lang="en">My writing was selected for the CGA Press Creative Writing Prize, awarded to one student across all age levels at Crimson Global Academy.</p>
+          <p lang="es">Mi texto fue seleccionado para el Premio de Escritura Creativa CGA Press, que se otorga a un solo estudiante entre todos los niveles de Crimson Global Academy.</p>
         </article>
 
         <article class="post">
-          <time datetime="2025-09">September 2025</time>
-          <h3><em>Muses of Apollo</em> launches <span class="tag">Podcast</span></h3>
-          <!-- PLACEHOLDER: replace # with the Spotify show link -->
-          <p>I started an art podcast with peers in Japan, exploring artistic ideas across cultures. <a href="#">Listen on Spotify</a>.</p>
+          <time datetime="2025-09"><span lang="en">September 2025</span><span lang="es">Septiembre 2025</span></time>
+          <h3><em>Muses of Apollo</em> <span lang="en">launches</span><span lang="es">sale al aire</span> <span class="tag"><span lang="en">Podcast</span><span lang="es">Pódcast</span></span></h3>
+          <!-- PLACEHOLDER: replace # with the Spotify show link (both languages) -->
+          <p lang="en">I started an art podcast with peers in Japan, exploring artistic ideas across cultures. <a href="#">Listen on Spotify</a>.</p>
+          <p lang="es">Inicié un pódcast de arte con jóvenes en Japón para explorar ideas artísticas entre culturas. <a href="#">Escúchalo en Spotify</a>.</p>
         </article>
 
         <article class="post">
-          <time datetime="2025-07">Summer 2025</time>
-          <h3>SAIC Summer Studio Intensive</h3>
+          <time datetime="2025-07"><span lang="en">Summer 2025</span><span lang="es">Verano 2025</span></time>
+          <h3><span lang="en">SAIC Summer Studio Intensive</span><span lang="es">Intensivo de verano en SAIC</span></h3>
           <!-- PLACEHOLDER: add a studio photo: images/news/2025-saic.jpg -->
-          <p>Three weeks in Chicago on a merit scholarship: 20+ works, 10 critiques, and a lot of learning to let mistakes stay in the piece.</p>
-          <img src="images/works/_placeholder-4.svg" alt="PLACEHOLDER — Cris at work in the SAIC studio" width="1200" height="800" loading="lazy" decoding="async">
+          <p lang="en">Three weeks in Chicago on a merit scholarship: 20+ works, 10 critiques, and a lot of learning to let mistakes stay in the piece.</p>
+          <p lang="es">Tres semanas en Chicago con beca por mérito: más de 20 obras, 10 críticas y mucho aprendizaje para dejar que los errores se queden en la pieza.</p>
+          <img src="images/works/_placeholder-4.svg" alt="PLACEHOLDER — Cris at work in the SAIC studio" data-es-alt="PLACEHOLDER — Cris trabajando en el taller de SAIC" width="1200" height="800" loading="lazy" decoding="async">
         </article>
       </section>
 
       <!-- ============ INSTAGRAM ============ -->
       <aside class="ig-card" aria-labelledby="ig-heading">
-        <p class="eyebrow" id="ig-heading">On Instagram</p>
+        <p class="eyebrow" id="ig-heading"><span lang="en">On Instagram</span><span lang="es">En Instagram</span></p>
         <p class="handle"><a href="https://www.instagram.com/cris_dominguz2007/" rel="me noopener" target="_blank">@cris_dominguz2007</a></p>
-        <p class="lede" style="margin-top:0;font-size:.95rem">Works in progress, sketches, and life on the coast.</p>
+        <p class="lede" style="margin-top:0;font-size:.95rem"><span lang="en">Works in progress, sketches, and life on the coast.</span><span lang="es">Obras en proceso, bocetos y la vida en la costa.</span></p>
 
         <!--
-          OPTION A (default, fastest, no tracking): a static 3×3 grid of recent posts.
-          Save small square crops to images/instagram/1.jpg … 9.jpg and point each link at the post URL.
+          OPTION A (default, fastest, no tracking): a static grid of recent posts.
+          Save small square crops to images/instagram/1.jpg … 6.jpg and point each link at the post URL.
         -->
         <div class="ig-grid">
           <!-- PLACEHOLDER: replace href with the post URL and src with images/instagram/N.jpg -->
-          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-1.svg" alt="Instagram post — PLACEHOLDER description" loading="lazy" width="300" height="300"></a>
-          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-2.svg" alt="Instagram post — PLACEHOLDER description" loading="lazy" width="300" height="300"></a>
-          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-3.svg" alt="Instagram post — PLACEHOLDER description" loading="lazy" width="300" height="300"></a>
-          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-5.svg" alt="Instagram post — PLACEHOLDER description" loading="lazy" width="300" height="300"></a>
-          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-6.svg" alt="Instagram post — PLACEHOLDER description" loading="lazy" width="300" height="300"></a>
-          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-8.svg" alt="Instagram post — PLACEHOLDER description" loading="lazy" width="300" height="300"></a>
+          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-1.svg" alt="Instagram post — PLACEHOLDER" data-es-alt="Publicación de Instagram — PLACEHOLDER" loading="lazy" width="300" height="300"></a>
+          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-2.svg" alt="Instagram post — PLACEHOLDER" data-es-alt="Publicación de Instagram — PLACEHOLDER" loading="lazy" width="300" height="300"></a>
+          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-3.svg" alt="Instagram post — PLACEHOLDER" data-es-alt="Publicación de Instagram — PLACEHOLDER" loading="lazy" width="300" height="300"></a>
+          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-5.svg" alt="Instagram post — PLACEHOLDER" data-es-alt="Publicación de Instagram — PLACEHOLDER" loading="lazy" width="300" height="300"></a>
+          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-6.svg" alt="Instagram post — PLACEHOLDER" data-es-alt="Publicación de Instagram — PLACEHOLDER" loading="lazy" width="300" height="300"></a>
+          <a href="https://www.instagram.com/cris_dominguz2007/" target="_blank" rel="noopener"><img src="images/works/_placeholder-8.svg" alt="Instagram post — PLACEHOLDER" data-es-alt="Publicación de Instagram — PLACEHOLDER" loading="lazy" width="300" height="300"></a>
         </div>
 
         <!--
@@ -112,17 +124,17 @@
           such as Behold.so or LightWidget gives you a <script> snippet — paste it here in place of .ig-grid.
         -->
 
-        <a class="btn btn-accent" href="https://www.instagram.com/cris_dominguz2007/" rel="me noopener" target="_blank">Follow on Instagram</a>
+        <a class="btn btn-accent" href="https://www.instagram.com/cris_dominguz2007/" rel="me noopener" target="_blank"><span lang="en">Follow on Instagram</span><span lang="es">Sígueme en Instagram</span></a>
       </aside>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© <span data-current-year>2026</span> Cris Dominguez. All artwork © the artist.</p>
+      <p>© <span data-current-year>2026</span> Cris Dominguez. <span lang="en">All artwork © the artist.</span><span lang="es">Todas las obras © la artista.</span></p>
       <ul class="footer-links">
         <li><a href="https://www.instagram.com/cris_dominguz2007/" rel="me noopener" target="_blank">Instagram</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html"><span lang="en">Contact</span><span lang="es">Contacto</span></a></li>
       </ul>
     </div>
   </footer>
