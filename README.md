@@ -37,7 +37,9 @@ Find every spot that still needs content by searching the project for `PLACEHOLD
 
 ### 1. Put the site in the repo
 1. Clone `https://github.com/alecodominguez/crisdominguez.com`. Alternatively, open it on github.com and use **Add file → Upload files**.
-2. Copy everything in this folder into the **root** of the repo, including the hidden `.nojekyll` file, then commit and push to `main`.
+2. Copy everything in this folder into the **root** of the repo, then commit and push to `main`.
+   - **Hidden file:** `.nojekyll` is easy to miss, because Finder hides it and the web uploader skips it. To add it on GitHub, choose **Add file → Create new file**, name it `.nojekyll`, leave it empty, and commit. Without it the site still works, but GitHub ignores any file or folder whose name starts with `_`.
+   - **Seeing your changes:** a deploy takes about 1 minute; you can watch it under the repo's **Actions** tab. Browsers then keep the old copy for up to 10 minutes. To see the new version right away, hard-refresh (Cmd+Shift+R on Mac, Ctrl+F5 on Windows) or open the site in a private window.
 
 ### 2. Turn on Pages and connect the domain
 1. Go to **Repo → Settings → Pages**. Under **Source**, choose *Deploy from a branch*, then pick `main` and `/ (root)`.
@@ -64,7 +66,7 @@ Find every spot that still needs content by searching the project for `PLACEHOLD
 - **File names:** use `year-title-in-lowercase-with-hyphens.jpg`, e.g. `2025-self-portrait-with-mask.jpg`. Don't use spaces, accents, or capitals, because GitHub Pages URLs are case-sensitive.
 - **Free tools:** [Squoosh](https://squoosh.app) in the browser, or on a Mac run `sips -Z 2000 *.jpg` to resize a whole folder.
 - **Photographing work:** use daylight with no flash, shoot the piece straight on, and crop off the background. Shoot 3D work against a plain wall.
-- Delete the `_placeholder-*.svg` files after the real images are in.
+- Delete the `placeholder-*.svg` files after the real images are in.
 
 ### 4. Add a work
 In `index.html`, copy the template that sits in the comment above `<ul class="works-grid">`. Paste it as the **first** item to keep newest work first, then fill in:
