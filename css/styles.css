@@ -14,6 +14,8 @@
   --line: #e2dbcf;           /* hairlines */
   --accent: #2f6f6a;         /* Pacific sea-teal */
   --accent-ink: #ffffff;
+  --accent-soft: #e3ecea;    /* pale sea-teal wash for panels and hovers */
+  --accent-deep: #22524e;    /* darker teal for hover states */
   /* Previous option: --accent: #b5532f;  (terracotta / painted boats) */
 
   /* Type */
@@ -307,6 +309,59 @@ h3 { font-size: 1.15rem; margin: 0; }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; }
 .footer-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
 .footer-links a { text-decoration: none; }
+
+/* ---------- Sea-teal accents ----------
+   Teal frames the site (header line, labels, buttons, quotes, links)
+   but never sits behind the artwork itself. */
+::selection { background: var(--accent); color: var(--accent-ink); }
+.site-header { border-top: 3px solid var(--accent); }
+.wordmark .dot { font-size: 1.15em; line-height: 0; }
+.eyebrow { color: var(--accent); font-weight: 500; }
+.nav-list a[aria-current="page"] { border-bottom-width: 2px; }
+.nav-list a:hover { color: var(--accent); }
+.lede em { color: var(--accent); }
+h1 + .lede, .page-intro h1 { position: relative; }
+.page-intro h1::after {
+  content: ""; display: block; width: 56px; height: 3px; margin-top: 20px;
+  background: var(--accent); border-radius: 2px;
+}
+
+/* Filters */
+.filter-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.filter-btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+/* Works */
+.work-thumb { transition: box-shadow .2s var(--ease); }
+.work-thumb:hover, .work-thumb:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+.work:hover .work-title { color: var(--accent); }
+.lb-btn:hover { color: var(--accent); }
+
+/* Buttons */
+.btn { border-color: var(--accent); color: var(--accent); }
+.btn:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.btn-accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.btn-accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); color: var(--accent-ink); }
+
+/* About / CV */
+.prose .pull { border-left-width: 3px; color: var(--accent-deep); }
+.section > h2::before, .cv-head h2::before {
+  content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 12px;
+  background: var(--accent); border-radius: 50%; vertical-align: middle;
+}
+.cv-block > h3 { color: var(--accent); }
+.cv-what .tag, .tag { color: var(--accent); }
+
+/* News */
+.post time { color: var(--accent); font-weight: 500; }
+.ig-card { background: var(--accent-soft); border-top: 3px solid var(--accent); }
+
+/* Contact */
+.contact-item h2 { color: var(--accent); }
+.contact-item a:hover { color: var(--accent); }
+
+/* Footer */
+.site-footer { background: var(--accent); color: color-mix(in srgb, var(--accent-ink) 82%, var(--accent)); border-top: 0; }
+.site-footer a:hover { color: var(--accent-ink); }
 
 /* ---------- Motion preferences ---------- */
 @media (prefers-reduced-motion: reduce) {
