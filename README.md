@@ -7,13 +7,15 @@ crisdominguez.com/
 ├── index.html            ← Works (portfolio grid + lightbox)
 ├── about.html            ← Bio, artist statement, CV
 ├── news.html             ← Updates + Instagram
+├── writing.html          ← Selected poems
 ├── contact.html          ← Email + social links
 ├── 404.html
 ├── CNAME                 ← www.crisdominguez.com  (do not delete)
 ├── .nojekyll             ← tells Pages to serve files as-is
 ├── robots.txt, sitemap.xml
 ├── css/styles.css        ← all styling; colors and fonts live in :root
-├── js/main.js            ← nav, filters, lightbox, email
+├── js/works-data.js      ← ALL artwork: titles, statements, images (edit this)
+├── js/main.js            ← builds the Works page, viewer, language switch
 ├── assets/
 │   └── cris-dominguez-cv.pdf      ← (add) downloadable CV
 └── images/
@@ -37,8 +39,8 @@ Find every spot that still needs content by searching the project for `PLACEHOLD
 
 ### 1. Put the site in the repo
 1. Clone `https://github.com/alecodominguez/crisdominguez.com`. Alternatively, open it on github.com and use **Add file → Upload files**.
-2. Copy everything in this folder into the **root** of the repo, then commit and push to `main`.
-   - **Hidden file:** `.nojekyll` is easy to miss, because Finder hides it and the web uploader skips it. To add it on GitHub, choose **Add file → Create new file**, name it `.nojekyll`, leave it empty, and commit. Without it the site still works, but GitHub ignores any file or folder whose name starts with `_`.
+2. Copy the site files into the **root** of the repo, then commit and push to `main`. Leave out the `crisdominguez.com/` and `Claude outputs/` folders (see the privacy section below).
+   - **Hidden file:** `.nojekyll` is easy to miss, because Finder hides it and the web uploader skips it. To add it on GitHub, choose **Add file → Create new file**, name it `.nojekyll`, leave it empty, and commit.
    - **Seeing your changes:** a deploy takes about 1 minute; you can watch it under the repo's **Actions** tab. Browsers then keep the old copy for up to 10 minutes. To see the new version right away, hard-refresh (Cmd+Shift+R on Mac, Ctrl+F5 on Windows) or open the site in a private window.
 
 ### 2. Turn on Pages and connect the domain
@@ -66,15 +68,14 @@ Find every spot that still needs content by searching the project for `PLACEHOLD
 - **File names:** use `year-title-in-lowercase-with-hyphens.jpg`, e.g. `2025-self-portrait-with-mask.jpg`. Don't use spaces, accents, or capitals, because GitHub Pages URLs are case-sensitive.
 - **Free tools:** [Squoosh](https://squoosh.app) in the browser, or on a Mac run `sips -Z 2000 *.jpg` to resize a whole folder.
 - **Photographing work:** use daylight with no flash, shoot the piece straight on, and crop off the background. Shoot 3D work against a plain wall.
-- Delete the `placeholder-*.svg` files after the real images are in.
+- The old `placeholder-*.svg` files in `images/works/` are no longer used and can be deleted (keep `images/site/portrait-placeholder.svg` until her portrait is in).
 
-### 4. Add a work
-In `index.html`, copy the template that sits in the comment above `<ul class="works-grid">`. Paste it as the **first** item to keep newest work first, then fill in:
-- `data-medium`: one or more of `oils graphite photography painting drawing sculpture mixed-media film`
-- `data-full`: the full-size image path
-- `src`: the thumbnail path
-- `alt`: what a viewer actually *sees* (for example: "Oil painting of three blue fishing boats pulled onto the sand at dawn, rough orange brushstrokes in the sky"). Screen readers use this text, and so does Google Images.
-- Title, then **Medium · Dimensions · Year** in both languages (in the Spanish version, give dimensions in cm). Use dimensions as H × W (× D) in inches or cm, and keep one unit across the whole site.
+### 4. Add or edit a work
+All artwork is listed in **`js/works-data.js`**, one block per piece or collection. You don't need to touch the HTML.
+1. Resize the photo into two copies with the same file name: a large one in `images/works/` (2000 px) and a small one in `images/works/thumbs/` (900 px).
+2. In `js/works-data.js`, copy an existing `{ … }` block into the right group and edit its title, medium, year, statement and images. Each piece's statement is hidden on the grid and opens when someone clicks the work or "Read statement".
+3. To add a **collection**, use `section: "collections"` and list several images. The viewer steps through them in order.
+4. Lines marked `// CHECK` are things Cris should confirm, such as working titles or draft statements.
 
 ### 5. English / Spanish
 Every bit of visible text is written twice, side by side:
@@ -88,8 +89,8 @@ The EN/ES switch in the header shows one and hides the other. The choice is reme
 - Text that's the same in both languages, such as names or a title she keeps in one language, doesn't need spans.
 - If you forget the Spanish half of a pair, that text simply won't appear in Spanish. Search for `lang="en"` to double-check.
 
-### 6. Filter categories
-The Works filters are: Oils, Graphite Drawings, Photography, Painting, Drawing, Sculpture, Mixed media, Film & digital. Tag each work with `data-medium` (for example `oils`, `graphite`, `photography`). A chip only appears once at least one work uses it, so unused categories stay hidden.
+### 6. Groups and filters
+The Works page is grouped as: Collections · Oils · Graphite Drawings · Ink · Color & Pattern · Collage · Sculpture & Installation · Photography · In Progress. To rename or reorder them, edit `SECTIONS` at the top of `js/works-data.js`. A group only appears if it has at least one work. Each group has its own link, for example `crisdominguez.com/#photography`.
 
 ### 7. Update the CV, news, and contact info
 - **CV:** edit `about.html`. Every entry is an `<li class="cv-item">`, so copy one and change the text. Also export the PDF to `assets/cris-dominguez-cv.pdf`.
@@ -97,5 +98,7 @@ The Works filters are: Oils, Graphite Drawings, Photography, Painting, Drawing, 
 - **Email:** in `contact.html`, set `data-email-user` / `data-email-domain`.
 - **Accent color or fonts:** edit `:root` at the top of `css/styles.css`. The current accent is Pacific sea-teal `#2f6f6a`.
 
-### Privacy note
-Cris is under 18, and this site is public. It intentionally leaves out her phone number, citizenship, exact village, and GPA, all of which appear on her resume. Keep those off the downloadable PDF as well.
+### Privacy and the originals folder
+- **Never upload the `crisdominguez.com/` folder** (the Drive originals) or `Claude outputs/` to GitHub. They hold her full resume with her phone number and about 300 MB of originals. The site only uses the resized copies in `images/works/`. A `.gitignore` file excludes those folders if you use git or GitHub Desktop, but the github.com drag-and-drop uploader ignores it, so only drag in the site files.
+- The resized images had their camera metadata (including any GPS location) removed.
+- The site intentionally leaves out her phone number, citizenship, exact town and GPA. Keep those off the downloadable CV PDF too.

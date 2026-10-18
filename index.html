@@ -3,28 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Language: applied before paint. Order: ?lang=es in URL → saved choice → browser language. -->
   <script>(function(){try{var q=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("lang"),l=q||s||((navigator.language||"").slice(0,2)==="es"?"es":"en");if(l==="es"){document.documentElement.classList.add("lang-es");document.documentElement.lang="es";}}catch(e){}})();</script>
   <title>Cris Dominguez — Works</title>
-  <meta name="description" content="Portfolio of Cris Dominguez, a bilingual visual artist working in oil, graphite, photography, sculpture, and mixed media on Mexico's Pacific coast. Portafolio de la artista visual Cris Dominguez.">
+  <meta name="description" content="Portfolio of Cris Dominguez: oils, graphite drawings, ink, photography, collage, sculpture and installation, including the Fountain of Love and The Vision Collection series. Portafolio de la artista Cris Dominguez.">
   <link rel="canonical" href="https://www.crisdominguez.com/">
-
-  <!-- Social sharing. Replace og-image.jpg with a 1200x630 crop of a favorite work. -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_MX">
   <meta property="og:title" content="Cris Dominguez — Artist">
-  <meta property="og:description" content="Oil painting, graphite drawing, photography, sculpture, and mixed media.">
+  <meta property="og:description" content="Oils, graphite, ink, photography, collage and installation.">
   <meta property="og:url" content="https://www.crisdominguez.com/">
   <meta property="og:image" content="https://www.crisdominguez.com/images/site/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
   <link rel="icon" href="images/site/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,6 +43,7 @@
         <ul class="nav-list">
           <li><a href="./" aria-current="page"><span lang="en">Works</span><span lang="es">Obras</span></a></li>
           <li><a href="about.html"><span lang="en">About</span><span lang="es">Acerca</span></a></li>
+          <li><a href="writing.html"><span lang="en">Writing</span><span lang="es">Escritura</span></a></li>
           <li><a href="news.html"><span lang="en">News</span><span lang="es">Noticias</span></a></li>
           <li><a href="contact.html"><span lang="en">Contact</span><span lang="es">Contacto</span></a></li>
         </ul>
@@ -65,165 +61,38 @@
 
   <main id="main">
     <section class="wrap page-intro">
-      <p class="eyebrow"><span lang="en">Selected works · 2023 – present</span><span lang="es">Obra seleccionada · 2023 – presente</span></p>
-      <h1><span lang="en">Making without the mask.</span><span lang="es">Crear sin máscara.</span></h1>
-      <!-- PLACEHOLDER: one-sentence intro. Draft based on her personal statement — have Cris rewrite it in her own words (both languages). -->
-      <p class="lede" lang="en">Oil painting, graphite drawing, photography, sculpture and mixed media, made between Guadalajara, Chicago, and a small fishing village on Mexico's Pacific coast. This is work that <em>lets the mistakes stay in.</em></p>
-      <p class="lede" lang="es">Óleo, dibujo en grafito, fotografía, escultura y técnica mixta, hechos entre Guadalajara, Chicago y un pequeño pueblo de pescadores en la costa del Pacífico mexicano. Es obra que <em>deja que los errores se queden.</em></p>
+      <p class="eyebrow"><span lang="en">Selected works · 2025 – present</span><span lang="es">Obra seleccionada · 2025 – presente</span></p>
+      <h1><span lang="en">Everything is connected.</span><span lang="es">Todo está conectado.</span></h1>
+      <p class="lede" lang="en">Oils, graphite, ink, photography, collage and installation. The work moves between Chicago and the Pacific coast of Mexico, and it is about play, mistakes, and the threads that tie <em>you, me, the sea and the stars</em> together.</p>
+      <p class="lede" lang="es">Óleo, grafito, tinta, fotografía, collage e instalación. La obra va de Chicago a la costa del Pacífico mexicano, y trata del juego, de los errores y de los hilos que nos unen: <em>a ti, a mí, al mar y a las estrellas.</em></p>
     </section>
 
-    <section class="wrap" aria-labelledby="works-heading">
-      <h2 id="works-heading" class="visually-hidden"><span lang="en">Works</span><span lang="es">Obras</span></h2>
-
-      <!-- Filters: data-filter must match a word in a work's data-medium.
-           Chips with no matching works hide themselves automatically, so it's safe to keep them all. -->
-      <ul class="filters" aria-label="Filter works by medium" data-es-aria-label="Filtrar obras por técnica">
-        <li class="filter-chip"><button class="filter-btn" data-filter="all" aria-pressed="true"><span lang="en">All</span><span lang="es">Todo</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="oils" aria-pressed="false"><span lang="en">Oils</span><span lang="es">Óleos</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="graphite" aria-pressed="false"><span lang="en">Graphite Drawings</span><span lang="es">Dibujos en grafito</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="photography" aria-pressed="false"><span lang="en">Photography</span><span lang="es">Fotografía</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="painting" aria-pressed="false"><span lang="en">Painting</span><span lang="es">Pintura</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="drawing" aria-pressed="false"><span lang="en">Drawing</span><span lang="es">Dibujo</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="sculpture" aria-pressed="false"><span lang="en">Sculpture</span><span lang="es">Escultura</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="mixed-media" aria-pressed="false"><span lang="en">Mixed media</span><span lang="es">Técnica mixta</span></button></li>
-        <li class="filter-chip"><button class="filter-btn" data-filter="film" aria-pressed="false"><span lang="en">Film &amp; digital</span><span lang="es">Cine y digital</span></button></li>
-      </ul>
-
-      <!--
-        ============================================================
-        HOW TO ADD A WORK  (copy this whole <li> block; newest first)
-        ============================================================
-        <li class="work" data-medium="oils" data-year="2026"
-            data-full="images/works/2026-title-slug.jpg">
-          <button class="work-thumb" type="button"
-                  aria-label="View larger: TITLE" data-es-aria-label="Ver en grande: TÍTULO">
-            <img src="images/works/thumbs/2026-title-slug.jpg"
-                 alt="DESCRIBE WHAT IS SEEN (English)"
-                 data-es-alt="DESCRIBE LO QUE SE VE (español)"
-                 width="800" height="1000" loading="lazy" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">TITLE</span><span lang="es">TÍTULO</span></p>
-            <p class="work-meta"><span lang="en">Oil on canvas · 24 × 30 in · 2026</span><span lang="es">Óleo sobre lienzo · 61 × 76 cm · 2026</span></p>
-            <p class="work-desc" hidden><span lang="en">Optional description.</span><span lang="es">Descripción opcional.</span></p>
-          </figcaption>
-        </li>
-        - data-medium words: oils  graphite  photography  painting  drawing  sculpture  mixed-media  film
-          (several allowed, e.g. data-medium="graphite drawing")
-        - If a title is the same in both languages, just write it once without the spans.
-        - First 4 works: remove loading="lazy" so they appear instantly.
-        ============================================================
-      -->
-      <ul class="works-grid">
-
-        <!-- PLACEHOLDER WORK 01 -->
-        <li class="work" data-medium="oils" data-year="2026" data-full="images/works/placeholder-1.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Untitled (Boats at Dawn)" data-es-aria-label="Ver en grande: Sin título (Lanchas al amanecer)">
-            <img src="images/works/placeholder-1.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Untitled (Boats at Dawn)</span><span lang="es">Sin título (Lanchas al amanecer)</span></p>
-            <p class="work-meta"><span lang="en">Oil on canvas · 24 × 30 in · 2026</span><span lang="es">Óleo sobre lienzo · 61 × 76 cm · 2026</span></p>
-            <p class="work-desc" hidden><span lang="en">PLACEHOLDER description.</span><span lang="es">PLACEHOLDER descripción.</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 02 -->
-        <li class="work" data-medium="graphite" data-year="2026" data-full="images/works/placeholder-2.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Title of Work" data-es-aria-label="Ver en grande: Título de la obra">
-            <img src="images/works/placeholder-2.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Title of Work</span><span lang="es">Título de la obra</span></p>
-            <p class="work-meta"><span lang="en">Graphite on paper · 18 × 24 in · 2026</span><span lang="es">Grafito sobre papel · 46 × 61 cm · 2026</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 03 -->
-        <li class="work" data-medium="photography" data-year="2025" data-full="images/works/placeholder-3.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Title of Work" data-es-aria-label="Ver en grande: Título de la obra">
-            <img src="images/works/placeholder-3.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Title of Work</span><span lang="es">Título de la obra</span></p>
-            <p class="work-meta"><span lang="en">Digital photograph · Dimensions variable · 2025</span><span lang="es">Fotografía digital · Medidas variables · 2025</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 04 — e.g. a piece from the SAIC summer intensive -->
-        <li class="work" data-medium="sculpture" data-year="2025" data-full="images/works/placeholder-4.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Title of Work" data-es-aria-label="Ver en grande: Título de la obra">
-            <img src="images/works/placeholder-4.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Title of Work</span><span lang="es">Título de la obra</span></p>
-            <p class="work-meta"><span lang="en">Clay and found objects · 10 × 6 × 6 in · 2025</span><span lang="es">Barro y objetos encontrados · 25 × 15 × 15 cm · 2025</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 05 -->
-        <li class="work" data-medium="graphite" data-year="2025" data-full="images/works/placeholder-5.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Title of Work" data-es-aria-label="Ver en grande: Título de la obra">
-            <img src="images/works/placeholder-5.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" loading="lazy" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Title of Work</span><span lang="es">Título de la obra</span></p>
-            <p class="work-meta"><span lang="en">Graphite on paper · 9 × 12 in · 2025</span><span lang="es">Grafito sobre papel · 23 × 30 cm · 2025</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 06 -->
-        <li class="work" data-medium="oils" data-year="2024" data-full="images/works/placeholder-6.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Title of Work" data-es-aria-label="Ver en grande: Título de la obra">
-            <img src="images/works/placeholder-6.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" loading="lazy" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Title of Work</span><span lang="es">Título de la obra</span></p>
-            <p class="work-meta"><span lang="en">Oil on panel · 12 × 16 in · 2024</span><span lang="es">Óleo sobre tabla · 30 × 41 cm · 2024</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 07 — the Costa Rica documentary stays as a card here. Link out to YouTube/Vimeo via the description, or swap the button for an <a>. -->
-        <li class="work" data-medium="film" data-year="2024" data-full="images/works/placeholder-7.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Documentary, Costa Rica" data-es-aria-label="Ver en grande: Documental, Costa Rica">
-            <img src="images/works/placeholder-7.svg" alt="PLACEHOLDER — still frame from the documentary" data-es-alt="PLACEHOLDER — fotograma del documental" width="800" height="1000" loading="lazy" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Documentary (title TBD)</span><span lang="es">Documental (título por definir)</span></p>
-            <p class="work-meta"><span lang="en">Short documentary film · 30 min · 2024</span><span lang="es">Cortometraje documental · 30 min · 2024</span></p>
-            <p class="work-desc" hidden><span lang="en">Interviews, filming and editing documenting a four-week service-learning program in San José, Costa Rica, and the cross-cultural perspectives of the people involved.</span><span lang="es">Entrevistas, filmación y edición que documentan un programa de aprendizaje-servicio de cuatro semanas en San José, Costa Rica, y las perspectivas interculturales de quienes participaron.</span></p>
-          </figcaption>
-        </li>
-
-        <!-- PLACEHOLDER WORK 08 -->
-        <li class="work" data-medium="photography" data-year="2023" data-full="images/works/placeholder-8.svg">
-          <button class="work-thumb" type="button" aria-label="View larger: Title of Work" data-es-aria-label="Ver en grande: Título de la obra">
-            <img src="images/works/placeholder-8.svg" alt="PLACEHOLDER — describe the artwork" data-es-alt="PLACEHOLDER — describe la obra" width="800" height="1000" loading="lazy" decoding="async">
-          </button>
-          <figcaption>
-            <p class="work-title"><span lang="en">Title of Work</span><span lang="es">Título de la obra</span></p>
-            <p class="work-meta"><span lang="en">Film photograph · 8 × 10 in · 2023</span><span lang="es">Fotografía analógica · 20 × 25 cm · 2023</span></p>
-          </figcaption>
-        </li>
-
-      </ul>
-      <p class="works-empty" hidden><span lang="en">No works in this medium yet.</span><span lang="es">Aún no hay obras en esta técnica.</span></p>
-    </section>
+    <!-- The works below are generated from js/works-data.js. Edit that file to add or change pieces. -->
+    <div class="wrap works-app" id="works-app">
+      <noscript><p><span lang="en">Please enable JavaScript to view the portfolio.</span></p></noscript>
+    </div>
   </main>
 
-  <!-- Lightbox (filled in by js/main.js) -->
+  <!-- Viewer (filled in by js/main.js) -->
   <dialog id="lightbox" class="lightbox" aria-label="Artwork viewer" data-es-aria-label="Visor de obras">
-    <button class="lb-btn lb-close" type="button"><span lang="en">Close</span><span lang="es">Cerrar</span> ✕</button>
-    <button class="lb-btn lb-prev" type="button" aria-label="Previous work" data-es-aria-label="Obra anterior">←</button>
-    <button class="lb-btn lb-next" type="button" aria-label="Next work" data-es-aria-label="Obra siguiente">→</button>
-    <div class="lightbox-inner">
-      <figure class="lightbox-figure"><img src="" alt=""></figure>
-      <div class="lightbox-caption">
-        <p class="work-title"></p>
-        <p class="work-meta"></p>
-        <p class="lightbox-desc" hidden></p>
-      </div>
+    <div class="lb-layout">
+      <figure class="lb-figure"><img src="" alt=""></figure>
+      <aside class="lb-info">
+        <p class="lb-kicker eyebrow"></p>
+        <h2 class="lb-title"></h2>
+        <p class="lb-meta work-meta"></p>
+        <details class="lb-statement">
+          <summary><span lang="en">Statement</span><span lang="es">Declaración</span></summary>
+          <p class="lb-statement-text"></p>
+        </details>
+        <div class="lb-nav">
+          <button class="lb-btn lb-prev" type="button" aria-label="Previous" data-es-aria-label="Anterior">←</button>
+          <span class="lb-count"></span>
+          <button class="lb-btn lb-next" type="button" aria-label="Next" data-es-aria-label="Siguiente">→</button>
+        </div>
+      </aside>
     </div>
+    <button class="lb-btn lb-close" type="button"><span lang="en">Close</span><span lang="es">Cerrar</span> ✕</button>
   </dialog>
 
   <footer class="site-footer">
@@ -236,6 +105,7 @@
     </div>
   </footer>
 
+  <script src="js/works-data.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
