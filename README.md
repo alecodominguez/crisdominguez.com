@@ -17,7 +17,7 @@ crisdominguez.com/
 ├── js/works-data.js      ← ALL artwork: titles, statements, images (edit this)
 ├── js/main.js            ← builds the Works page, viewer, language switch
 ├── assets/
-│   └── cris-dominguez-cv.pdf      ← (add) downloadable CV
+│   └── cris-dominguez-cv.pdf      ← downloadable CV (2 pages)
 └── images/
     ├── works/
     │   ├── 2026-boats-at-dawn.jpg       ← full size, opens in the lightbox
@@ -25,8 +25,8 @@ crisdominguez.com/
     │       └── 2026-boats-at-dawn.jpg   ← grid thumbnail
     ├── site/
     │   ├── favicon.svg
-    │   ├── portrait.jpg           ← (add) About page photo, 4:5
-    │   └── og-image.jpg           ← (add) 1200×630 social share image
+    │   ├── portrait.jpg           ← About page photo, 4:5
+    │   └── og-image.jpg           ← 1200×630 social share image
     ├── news/                      ← photos used in News posts
     └── instagram/                 ← square crops for the Instagram grid
 ```
@@ -97,6 +97,19 @@ The Works page is grouped as: Collections · Oils · Graphite Drawings · Ink ·
 - **News:** copy an `<article class="post">` in `news.html`.
 - **Email:** in `contact.html`, set `data-email-user` / `data-email-domain`.
 - **Accent color or fonts:** edit `:root` at the top of `css/styles.css`. The current accent is Pacific sea-teal `#2f6f6a`.
+
+### 8. Visitor stats (GoatCounter)
+Every page already includes the GoatCounter snippet, pointed at `https://crisdominguez.goatcounter.com`. It counts only after the account exists:
+1. Go to **goatcounter.com → Sign up**.
+2. For **Code** enter exactly `crisdominguez` (it becomes `crisdominguez.goatcounter.com`). Add your email and a password. It's free for personal sites.
+3. Once the site is deployed, open the dashboard to see visits per page, referrers (for example, a university admissions portal) and countries. It uses no cookies, so no cookie banner is needed.
+4. Optional: in **Settings → Ignored IPs**, click "add your current IP" so your own visits don't count.
+5. If you pick a different code, change `crisdominguez` in the `data-goatcounter` line near the bottom of every `.html` file.
+
+### 9. Share image, portrait and CV
+- `images/site/og-image.jpg` (1200×630) is the preview shown when the link is shared in texts, email or social media. To change it, crop any work to 1200×630 and save it over that file.
+- `images/site/portrait.jpg` (1200×1500) is the About page photo.
+- `assets/cris-dominguez-cv.pdf` is the downloadable CV, built from her September 2026 resume. It leaves out her phone number, citizenship and GPA. Rebuild it whenever the resume changes.
 
 ### Privacy and the originals folder
 - **Never upload the `crisdominguez.com/` folder** (the Drive originals) or `Claude outputs/` to GitHub. They hold her full resume with her phone number and about 300 MB of originals. The site only uses the resized copies in `images/works/`. A `.gitignore` file excludes those folders if you use git or GitHub Desktop, but the github.com drag-and-drop uploader ignores it, so only drag in the site files.

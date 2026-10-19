@@ -453,6 +453,8 @@ h1 + .lede, .page-intro h1 { position: relative; }
   .statement-link { font-size: .75rem; }
   .badge { right: 6px; bottom: 6px; height: 24px; min-width: 24px; font-size: .7rem; }
 }
+.spotify-embed { display: block; border: 0; border-radius: 12px; margin-top: 16px; max-width: 520px; }
+
 /* ---------- Writing page ---------- */
 .poems { list-style: none; margin: 0 0 clamp(64px, 10vw, 120px); padding: 0; max-width: 720px; }
 .poem { border-top: 1px solid var(--line); }
