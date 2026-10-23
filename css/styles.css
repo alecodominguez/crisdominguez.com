@@ -19,8 +19,8 @@
   /* Previous option: --accent: #b5532f;  (terracotta / painted boats) */
 
   /* Type */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Rhythm */
   --gutter: clamp(16px, 4vw, 48px);
@@ -38,7 +38,8 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.62;
+  font-feature-settings: "kern", "liga";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -77,7 +78,6 @@ a:hover { color: var(--accent); }
   font-family: var(--font-display);
   font-size: 1.35rem; font-weight: 500; letter-spacing: -0.01em;
   text-decoration: none; white-space: nowrap;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 .wordmark:hover { color: var(--ink); }
 .wordmark .dot { color: var(--accent); }
@@ -138,7 +138,7 @@ main { display: block; min-height: 60vh; }
 }
 h1, h2, h3 {
   font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: -0.015em;
-  font-variation-settings: "SOFT" 50;
+  font-optical-sizing: auto;
 }
 h1 { font-size: clamp(2.2rem, 6vw, 4.25rem); margin: 0; max-width: 18ch; }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 20px; }
@@ -501,8 +501,7 @@ body { background-color: var(--paper); background-image: var(--grain), var(--fib
 }
 /* homepage: the motif goes big */
 .page-intro:has(+ .works-app)::after { width: clamp(220px, 34vw, 440px); top: 50%; transform: translateY(-46%) rotate(-8deg); }
-h1 { font-size: clamp(2.7rem, 7.4vw, 6.2rem); font-weight: 500; letter-spacing: -0.035em; line-height: .98; max-width: 13ch;
-      font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144; }
+h1 { font-size: clamp(2.8rem, 7.8vw, 6.6rem); font-weight: 500; letter-spacing: -0.03em; line-height: .96; max-width: 13ch; font-optical-sizing: auto; }
 h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
 .page-intro h1::after { width: 88px; height: 5px; margin-top: 26px; border-radius: 3px; }
 @media (max-width: 720px) {
